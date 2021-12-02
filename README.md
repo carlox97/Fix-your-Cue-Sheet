@@ -1,7 +1,7 @@
 # Fix-your-Cue-Sheet
 Simple python tools to deal with .cue files.
 
-## cue_conflict_folder
+## cue_conflict_folder.py
 
 This should be the first tool to be be used: it shows *folders* and *sub-folders* within the specified path when the following (**unwanted**) conditions are satisfied:
 - folder contains one .cue and no audio files
@@ -26,7 +26,7 @@ Occasionally cue files point to a .wav file even though your audio file is actua
 This should be the second (and last recommended tool) to use. At the moment **only useful if you have no more than one .cue and one audio file per folder in your library** : the goal is to check whether the audio file *my_cd.flac* is present in the `FILE "my_cd.flac" WAVE` line in the cue file, for each folder and sub-folder in path.
 It it's not present the path to the folder containing such cue will be showed (you can uncomment `print(cue)` to show the path to the cue instead of the folder)
 
-## **FILE_fixer (not recommended)**
+## **FILE_fixer.py (not recommended)**
 **only useful if you have no more than one .cue and one audio file per folder in your library, do NOT run otherwise**
 For each folder and sub-folder in your path this tool search for *your_audio_file.flac/ape/etc* in the cuesheet. If it's not present in the , it replaces 
  `FILE "whatever.whatever" WAVE` 
