@@ -1,6 +1,5 @@
 import os
 
-
 for root, dirs, files in os.walk('C:\\whatever\\path'):
 
     cue = 0
