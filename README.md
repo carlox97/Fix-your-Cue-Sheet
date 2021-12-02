@@ -44,7 +44,7 @@ Maybe last time you were in Thailand you decided to rip a disc with EAC and the 
 ## Usage
 Install python: be sure to check *add to PATH* during the installation, then open windows terminal and type (for example)
 
-    python cue_conflict_folder.py
+    python path\to\cue_conflict_folder.py
 
 I use these tools on windows, hence the path has to be specified with  double escapes
 
