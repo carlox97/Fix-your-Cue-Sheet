@@ -1,5 +1,5 @@
 # Fix-your-Cue-Sheet
-A Python tool to deal with .cue files that are not properly configured.
+Python tools to deal with .cue files that are not properly configured.
 
 ## cue_conflict_folder
 
