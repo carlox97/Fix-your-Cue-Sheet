@@ -1,7 +1,7 @@
 import os
 
 
-for root, dirs, files in os.walk('G:\\'):
+for root, dirs, files in os.walk('C:\\whatever\\path'):
 
     cue = 0
     audio_files = 0
