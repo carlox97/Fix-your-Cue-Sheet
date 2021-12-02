@@ -42,7 +42,7 @@ and shows the foder containing the cue that was replaced.
 Maybe last time you were in Thailand you decided to rip a disc with EAC and the generated cue and audio file have some weird characters in them. This is where the binary version of the last two tools could come in handy. Use them if you are having problems with the non-binary ones.
 
 ## Usage
-Install python: be sure to check *add to PATH* during the installation, then open windows terminal and type
+Install python: be sure to check *add to PATH* during the installation, then open windows terminal and type (for example)
 
     python cue_conflict_folder.py
 
