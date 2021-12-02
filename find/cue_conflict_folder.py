@@ -14,3 +14,5 @@ for root, dirs, files in os.walk('C:\\whatever\\path'):
 
     if cue > 1 or (cue == 1 and audio_files != 1):
         print(root)
+        #cuepath = os.path.join(root, f)
+        #print(cuepath)
