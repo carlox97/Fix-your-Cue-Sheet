@@ -19,7 +19,7 @@ def cue_action(cue, audio_name, audio_ext):
 
 
 
-for root, dirs, files in os.walk('G:\\'):
+for root, dirs, files in os.walk('C:\\whatever\\path'):
 
     audio_ext = None
     audio_name = None
