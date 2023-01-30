@@ -1,9 +1,14 @@
+
 # Fix-your-Cue-Sheet
-Simple python tools to deal with .cue files.
+Collection of simple python scripts to deal with .cue files and their problems.
+
+## Usage
+
+Install Python, place the scripts to your desired folder (eg. root of your music library), open a command line interface within that folder and run `python cue_conflict_folder.py`
 
 ## cue_conflict_folder.py
 
-This should be the first tool to be be used: it shows *folders* and *sub-folders* within the specified path when the following (**unwanted**) conditions are satisfied:
+It shows *folders* and *sub-folders* within the specified path when the following (**unwanted**) conditions are satisfied:
 - folder contains one .cue and no audio files
 - folder contains one .cue and more than one audio file
 - folder contains more than one .cue file
@@ -27,7 +32,7 @@ This should be the second (and last recommended tool) to use. At the moment **on
 It it's not present the path to the folder containing such cue will be showed (you can uncomment `print(cue)` to show the path to the cue instead of the folder)
 
 ## **FILE_fixer.py (not recommended)**
-**only useful if you have no more than one .cue and one audio file per folder in your library, do NOT run otherwise**
+**only useful if you have ONLY one .cue and one audio file per folder in your library, do NOT run otherwise**
 For each folder and sub-folder in your path this tool search for *your_audio_file.flac/ape/etc* in the cuesheet. If it's not present in the , it replaces 
  `FILE "whatever.whatever" WAVE` 
  with 
@@ -40,19 +45,6 @@ and shows the foder containing the cue that was replaced.
 
 ## Note on text encoding and binary
 Maybe last time you were in Thailand you decided to rip a disc with EAC and the generated cue and audio file have some weird characters in them. This is where the binary version of the last two tools could come in handy. Use them if you are having problems with the non-binary ones.
-
-## Usage
-Install python: be sure to check *add to PATH* during the installation, then open windows terminal and type (for example)
-
-    python path\to\cue_conflict_folder.py
-
-I use these tools on windows, hence the path has to be specified with  double escapes
-
-> C:\\\Users\\\Whatever
-
-The path is specified inside each .py file, so you have to manually edit for the tool you plan to use. You can easily do that by opening any of th eincluded files with your favorite text editor and modify the following line (which is present in all the files)
-
-    for root, dirs, files in os.walk('G:\\'):
 
 ## Be careful!
 I know how painful it is to lose precious data, so be careful if you use the FILE_fixer.py tool. After you run it once, look carefully at the output and verify that everything is ok with the replaced cue files, restore them to their original if necessary and manually fix them.
