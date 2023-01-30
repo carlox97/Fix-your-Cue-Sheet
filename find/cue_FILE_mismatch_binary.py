@@ -4,12 +4,14 @@ from pathlib import Path
 
 def cue_action(cue, audio_name, audio_ext):
 
+    apici = "\""
+
     try:
         opened_cue = open(cue, 'rb')
     except:
         print("Couldn't open " + cue)
     with opened_cue:
-        search = bytes(audio_name.encode()) + bytes(audio_ext.encode())
+        search = bytes(apici.encode()) + bytes(audio_name.encode()) + bytes(audio_ext.encode()) + bytes(apici.encode())
         if search in opened_cue.read():
             opened_cue.close()
             return False
@@ -18,8 +20,9 @@ def cue_action(cue, audio_name, audio_ext):
         return True
 
 
+cwd = os.getcwd()
 
-for root, dirs, files in os.walk('C:\\whatever\\path'):
+for root, dirs, files in os.walk(cwd):
 
     audio_ext = None
     audio_name = None
@@ -31,7 +34,7 @@ for root, dirs, files in os.walk('C:\\whatever\\path'):
 
     if audio_ext is not None:
             for f in files:
-                if f.endswith(".cue") or f.endswith(".CUE"):
+                if f.endswith(".cue") or f.endswith(".CUE") or f.endswith(".Cue"):
                     cue = os.path.join(root, f)
                     if cue_action(cue, audio_name, audio_ext):
                         print(root)
