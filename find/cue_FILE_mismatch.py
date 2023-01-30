@@ -18,8 +18,9 @@ def cue_action(cue, audio_name, audio_ext):
         return True
 
 
+cwd = os.getcwd()
 
-for root, dirs, files in os.walk('C:\\whatever\\path'):
+for root, dirs, files in os.walk(cwd):
 
     audio_ext = None
     audio_name = None
@@ -31,7 +32,7 @@ for root, dirs, files in os.walk('C:\\whatever\\path'):
 
     if audio_ext is not None:
             for f in files:
-                if f.endswith(".cue") or f.endswith(".CUE"):
+                if f.endswith(".cue") or f.endswith(".CUE") or f.endswith(".Cue"):
                     cue = os.path.join(root, f)
                     if cue_action(cue, audio_name, audio_ext):
                         print(root)
